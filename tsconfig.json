@@ -18,10 +18,11 @@
     "importHelpers": true,
     "target": "es2020",
     "module": "es2020",
-    "lib": [
-      "es2020",
-      "dom"
-    ]
+    "lib": ["es2020", "dom"],
+    "paths": {
+      "@angular/*": ["./node_modules/@angular/*"],
+      "ng-core": ["../../../angular-build-lib/build-core/dist/ngx-core"]
+    }
   },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,

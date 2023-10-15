@@ -1,0 +1,10 @@
+{
+  "port": 7003,
+  "files": ["./dist/static/**/*.{html,htm,css,js}"],
+  "server": {
+    "baseDir": "./dist/static"
+  },
+  "ui": {
+    "port": 6003
+  }
+}

@@ -2,11 +2,12 @@
   "name": "ng-portal-a",
   "version": "0.0.0",
   "scripts": {
-    "ng": "ng",
-    "start": "ng serve",
+    "ng-serve": "ng ",
+    "start": "npm run watch",
     "build": "ng build",
-    "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "start:lite": "lite-server -c lite-server.config.json",
+    "watch": "ng build --single-bundle=true ng-portal-a --watch=true --configuration=development"
   },
   "private": true,
   "dependencies": {
@@ -14,10 +15,15 @@
     "@angular/common": "^14.1.0",
     "@angular/compiler": "^14.1.0",
     "@angular/core": "^14.1.0",
+    "@angular/elements": "^16.1.5",
     "@angular/forms": "^14.1.0",
     "@angular/platform-browser": "^14.1.0",
     "@angular/platform-browser-dynamic": "^14.1.0",
     "@angular/router": "^14.1.0",
+    "@types/lodash": "^4.14.195",
+    "lite-server": "^2.6.1",
+    "lodash": "^4.17.21",
+    "ngx-build-plus": "14.0.0",
     "rxjs": "~7.5.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.11.4"

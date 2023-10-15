@@ -1,0 +1,26 @@
+<form #form="ngForm" (ngSubmit)="handleSubmitForm(form)">
+  <div class="form-group">
+    <div class="form-control">
+      <input
+        [(ngModel)]="emailVar"
+        type="text"
+        placeholder="email"
+        email
+        required
+        #email="ngModel"
+        name="email"
+        minlength="4"
+      />
+    </div>
+
+    <div class="form-errors">
+      {{ email?.errors | json }}
+      <app-show-error
+        [customError]="customError"
+        [error]="email?.errors"
+      ></app-show-error>
+    </div>
+  </div>
+
+  <button type="submit">submit</button>
+</form>
